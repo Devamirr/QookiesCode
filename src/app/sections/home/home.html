@@ -1,4 +1,10 @@
 <section id="home">
-	<h1>Home</h1>
-	<p hipsum paragraphs="2"></p>
+    <div class="row medium-6">
+        <form name="loginForm" ng-submit="loginForm.$valid && homeCtrl.login(loginModel)" novalidate>
+          <input  type="email" ng-model="loginModel.email" placeholder="email">
+					<input  type="text" ng-model="loginModel.email" placeholder="name">
+					<input  type="date" ng-model="loginModel.email">
+          <button type="submit"> login</button>
+        </form>
+    </div>
 </section>
