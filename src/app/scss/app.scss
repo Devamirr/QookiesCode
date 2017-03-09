@@ -1,0 +1,20 @@
+// foundation
+@import
+  "zurb/global",
+  "zurb/settings",
+  "zurb/foundation";
+
+// main styles
+@import
+  "functions",
+  "grid",
+  "mixins",
+  "colors",
+  "base",
+  "typography",
+  "slick";
+
+
+body{
+	background-color: fuchsia;
+}
