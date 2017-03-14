@@ -9,10 +9,7 @@ require('angular').module('qookiescode')
 			'use strict';
 
 			var self = this,
-				user,
-				family,
-				familyUser,
-				userInvite;
+					user;
 			self.hello = 'hello';
 
 			$scope.pageClass = 'page-home';
@@ -21,11 +18,7 @@ require('angular').module('qookiescode')
 				user: {
 					name: '',
 					email: '',
-					familyName: '',
 					password: '',
-					userInvite: {
-						email: ['']
-					}
 				}
 			});
 
