@@ -12,9 +12,21 @@
   "colors",
   "base",
   "typography",
+  "tables",
   "slick";
 
 
 body{
 	background-color: fuchsia;
+  table {
+    @extend %table;
+    thead { font-weight: bold; }
+  }
+
+  input[type="checkbox"] { padding:8px; border-radius: 5px; background: white; transition: 100ms ease-in;
+        &:hover { background: green;}
+      }
+      input[type=checkbox]:checked {
+      background-color: green; border-radius: 5px;
+    }
 }

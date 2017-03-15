@@ -13,7 +13,7 @@ require('angular').module('qookiescode')
 			self.hello = 'hello';
 
 			$scope.pageClass = 'page-home';
-
+			
 			angular.extend($scope, {
 				user: {
 					name: '',

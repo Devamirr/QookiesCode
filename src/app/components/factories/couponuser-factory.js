@@ -6,6 +6,7 @@ angular.module('qookiescode')
 			Parse.defineAttributes(CouponUser, [
 				'email',
 				'username',
+				'used',
 				'birthday',
 				'createdAt',
 				'updatedAt',

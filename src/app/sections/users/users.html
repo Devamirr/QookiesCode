@@ -1,16 +1,29 @@
 <section id="users">
-	<div class="row medium-6">
-		<div class="column">
+	<div class="row large-8 medium-12 small-12">
+		<div class="column large-12 small-12">
 			<button type="submit" ng-click="usersCtrl.logout()"> logout</button>
 		</div>
-		<ul>
-			<li ng-repeat="CouponUser in CouponUsers">
-					<input type="checkbox" ng-click="toggleTodo(todo)" class="check-done-{{CouponUser.used}}" />
-					<!-- <span class="done-{{CouponUser.completed}}">{{CouponUser}} </span> -->
-					<p> {{ CouponUser.username }} </p>
-					<p> {{ CouponUser.email }} </p>
-					<p> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</p>
-			</li>
-		</ul>
+		<div class="column large-12 medium-12">
+			<table class="table ">
+				<thead>
+					<td> userCode</td>
+					<!-- <td> name</td> -->
+					<td> email </td>
+					<!-- <td> birthday</td> -->
+					<td> used</td>
+				</thead>
+				<tbody>
+				<tr ng-repeat="CouponUser in CouponUsers">
+
+					<!-- <span class="done-{{CouponUser.used}}">{{CouponUser}} </span> -->
+					<td> {{ CouponUser.id }} </td>
+					<!-- <td> {{ CouponUser.username }} </td> -->
+					<td> {{ CouponUser.email }} </td>
+					<!-- <td> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</td> -->
+					<td> <input ng-model="CouponUser.used" type="checkbox" ng-click="toggleTodo(CouponUser)" /> </td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
 	</div>
 </section>
