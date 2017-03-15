@@ -9,7 +9,7 @@ require('angular').module('qookiescode')
 			'use strict';
 
 			var self = this,
-					user;
+				user;
 			self.hello = 'hello';
 
 			$scope.pageClass = 'page-home';
@@ -45,17 +45,10 @@ require('angular').module('qookiescode')
 				Parse.User.logIn(user.email, user.password).then(function(user) {
 					console.log('succes login');
 					console.log(user);
-					// $state.go('home');
+					$state.go('users');
 				}, function(error) {
 					console.log(error);
 				});
 			};
-
-
-
-
-
-
-
 		}
 	]);
