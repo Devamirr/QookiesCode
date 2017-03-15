@@ -3,6 +3,14 @@
 		<div class="column">
 			<button type="submit" ng-click="usersCtrl.logout()"> logout</button>
 		</div>
-		<h1>Halllooo</h1>
+		<ul>
+			<li ng-repeat="CouponUser in CouponUsers">
+					<input type="checkbox" ng-click="toggleTodo(todo)" class="check-done-{{CouponUser.used}}" />
+					<!-- <span class="done-{{CouponUser.completed}}">{{CouponUser}} </span> -->
+					<p> {{ CouponUser.username }} </p>
+					<p> {{ CouponUser.email }} </p>
+					<p> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</p>
+			</li>
+		</ul>
 	</div>
 </section>

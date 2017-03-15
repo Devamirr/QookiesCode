@@ -5,50 +5,30 @@ require('angular').module('qookiescode')
         '$rootScope',
         'Parse',
         'User',
-        function($state, $scope, $rootScope, Parse, User) {
+        'CouponUser',
+        function($state, $scope, $rootScope, Parse, User, CouponUser) {
             'use strict';
 
-            var self = this,
-                user;
+            var self = this;
+
             self.hello = 'hello';
 
-            $scope.pageClass = 'page-home';
+            $scope.pageClass = 'page-users';
 
             angular.extend($scope, {
                 user: Parse.User.current(),
-                tasks: [],
-                markAll: false,
-                pageClass: 'page-dashboard',
+                pageClass: 'page-users',
+                CouponUsers: []
             });
 
-            self.sign = function sign(userModel) {
-                console.log(userModel);
 
-                user = new Parse.User();
-                user.email = userModel.email;
-                user.username = userModel.email;
-                user.password = userModel.password;
-                user.signUp(null).then(function(user) {
-
-                    return Parse.Object.saveAll(user);
-                }, function(error) {
-                    console.error(error);
-                });
-
-            };
+            var query = new Parse.Query(CouponUser);
+            query.find().then(function(nice) {
+                $scope.CouponUsers = CouponUsers;
+                console.log($scope.CouponUsers);
+            });
 
 
-
-            self.login = function login(user) {
-                console.log(user);
-                Parse.User.logIn(user.email, user.password).then(function(user) {
-                    console.log('succes login');
-                    console.log(user);
-                    // $state.go('home');
-                }, function(error) {
-                    console.log(error);
-                });
-            };
 
             self.logout = function() {
                 $rootScope.currentUser = null;
