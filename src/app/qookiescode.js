@@ -50,6 +50,12 @@ app.config([
 					templateUrl: 'sections/home/home.html',
 					controller: 'HomeController as homeCtrl'
 				})
+				.state('pcode', {
+					url: '/pcode',
+					parent: 'root',
+					templateUrl: 'sections/pcode/pcode.html',
+					controller: 'PcodeController as pcodeCtrl'
+				})
 				.state('login', {
 					url: '/login',
 					parent: 'root',
