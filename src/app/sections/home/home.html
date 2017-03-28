@@ -1,7 +1,16 @@
 <section id="home">
+	<div class="row  medium-5 small-10 large-4">
+		<div class="column small-12 logo"></div>
+		<div class="column medium-12">
+			<h3>Vul je gegevens in om een gratis bol ijs te ontvangen</h3>
+			<p>de actie is alleen geldig op 30 maart 2017</p>
+
+		</div>
+
+	</div>
 	<div class="row medium-4 small-8 large-2">
 		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" validate>
-			<input type="text" ng-model="loginModel.username" placeholder="name" required>
+			<input type="text" class="name" ng-model="loginModel.username" placeholder="name" required>
 			<input type="email" ng-model="loginModel.email" placeholder="email" required>
 			<input type="date" ng-model="loginModel.birthday" required>
 			<button type="submit" id="submit" name="submit" class="" ng-click="save()" required>send coupon to email</button>

@@ -32,6 +32,7 @@
 		var Browser = {
 			isIE: false
 		};
+
 	</script>
 	<!-- By default we will assume that the browser is not IE -->
 	<!--[if IE 5]><script>Browser = {isIE:true,version:5};</script><![endif]-->
@@ -60,17 +61,20 @@
 			a.src = g;
 			m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
 	</script>
 
 	<!-- build:remove dist,staging -->
 	<script>
 		ga('create', 'UA-XXXXXXXX-X', 'none');
+
 	</script>
 	<!-- /build -->
 
 	<!-- build:remove dev -->
 	<script>
 		ga('create', 'UA-XXXXXXXX-X', 'auto');
+
 	</script>
 	<!-- /build -->
 

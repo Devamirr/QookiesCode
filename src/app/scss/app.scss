@@ -32,11 +32,15 @@ body{
 }
 
 #home {
-
+  .logo { background: url('../img/Round-logo.svg')}
+  h3, p { text-align: center; color: white;}
   form { margin-top: 30px; width: 100%;
     input { height: 40px; border: none; width: 100%; display: block; padding: 10px; margin-bottom: 10px; border-radius: 10px; transition: all 300ms;}
-    .ng-invalid { color: color(Red); transition: all 300ms;}
-    .ng-valid-email { background: color(Green); color: white; transition: all 300ms;}
+    .name {
+      &.ng-not-empty { background: color(Green); color: white; transition: all 300ms; }
+     }
+    .ng-invalid,.ng-invalid-date { color: color(Red); transition: all 300ms;}
+    .ng-valid-email,.ng-valid-date { background: color(Green); color: white; transition: all 300ms;}
     .ng-empty {
       &.ng-valid-email { background: white; color: black; }
       &.ng-invalid { color: black; }
