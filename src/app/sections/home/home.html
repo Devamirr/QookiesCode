@@ -1,10 +1,10 @@
 <section id="home">
-	<div class="row medium-6">
-		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" novalidate>
-			<input type="email" ng-model="loginModel.email" placeholder="email">
-			<input type="text" ng-model="loginModel.username" placeholder="name">
-			<input type="date" ng-model="loginModel.birthday">
-			<button type="submit" id="submit" name="submit" class="" ng-click="save()">send coupon to email</button>
+	<div class="row medium-4 small-8 large-2">
+		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" validate>
+			<input type="text" ng-model="loginModel.username" placeholder="name" required>
+			<input type="email" ng-model="loginModel.email" placeholder="email" required>
+			<input type="date" ng-model="loginModel.birthday" required>
+			<button type="submit" id="submit" name="submit" class="" ng-click="save()" required>send coupon to email</button>
 		</form>
 	</div>
 </section>

@@ -51,7 +51,7 @@ app.config([
 					controller: 'HomeController as homeCtrl'
 				})
 				.state('pcode', {
-					url: '/pcode',
+					url: '/pcode/:CouponUserId',
 					parent: 'root',
 					templateUrl: 'sections/pcode/pcode.html',
 					controller: 'PcodeController as pcodeCtrl'

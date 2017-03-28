@@ -13,16 +13,16 @@
 					<td> used</td>
 				</thead>
 				<tbody>
-				<tr ng-repeat="CouponUser in CouponUsers">
+					<tr ng-repeat="CouponUser in CouponUsers">
 
-					<!-- <span class="done-{{CouponUser.used}}">{{CouponUser}} </span> -->
-					<td> {{ CouponUser.id }} </td>
-					<!-- <td> {{ CouponUser.username }} </td> -->
-					<td> {{ CouponUser.email }} </td>
-					<!-- <td> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</td> -->
-					<td> <input ng-model="CouponUser.used" type="checkbox" ng-click="toggleTodo(CouponUser)" /> </td>
-				</tr>
-			</tbody>
+						<!-- <span class="done-{{CouponUser.used}}">{{CouponUser}} </span> -->
+						<td> {{ CouponUser.id }} </td>
+						<!-- <td> {{ CouponUser.username }} </td> -->
+						<td> {{ CouponUser.email }} </td>
+						<!-- <td> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</td> -->
+						<td> <input ng-model="CouponUser.used" type="checkbox" ng-click="toggleTodo(CouponUser)" /> </td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</div>

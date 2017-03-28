@@ -1,29 +1,29 @@
-		<section id="home">
-			<div class="row medium-6">
-				<form name="registerForm" class="column small-8 small-offset-2 medium-12 medium-offset-0" ng-submit="registerForm.$valid && loginCtrl.sign(user)" novalidate>
-					<div class="name test column">
-						<label for="name" class="placeholderLabel">Your name</label>
-						<input ng-model="user.username" type="text" id="name" name="name" required>
-					</div>
-					<div class="email test">
-						<label for="email" class="placeholderLabel">Your email</label>
-						<input ng-model="user.email" type="email" id="email" name="email" required>
-					</div>
-					<div class="Passport test">
-						<label for="password" class="placeholderLabel">password </label>
-						<input type="password" id="dateMaskInput" name="password" ng-model="user.password">
-					</div>
-					<button type="submit" id="submit" name="submit" class="" ng-click="save()">Let's start</button>
-				</form>
-
- 
-
-
-
-				<form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.login(loginModel)" novalidate>
-					<input type="email" ng-model="loginModel.email">
-					<input ng-model="loginModel.password" type="password" placeholder="typ hier uw wachtwoord in">
-					<button type="submit"> login</button>
-				</form>
+<section id="home">
+	<div class="row medium-6">
+		<form name="registerForm" class="column small-8 small-offset-2 medium-12 medium-offset-0" ng-submit="registerForm.$valid && loginCtrl.sign(user)" novalidate>
+			<div class="name test column">
+				<label for="name" class="placeholderLabel">Your name</label>
+				<input ng-model="user.username" type="text" id="name" name="name" required>
 			</div>
-		</section>
+			<div class="email test">
+				<label for="email" class="placeholderLabel">Your email</label>
+				<input ng-model="user.email" type="email" id="email" name="email" required>
+			</div>
+			<div class="Passport test">
+				<label for="password" class="placeholderLabel">password </label>
+				<input type="password" id="dateMaskInput" name="password" ng-model="user.password">
+			</div>
+			<button type="submit" id="submit" name="submit" class="" ng-click="save()">Let's start</button>
+		</form>
+
+
+
+
+
+		<form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.login(loginModel)" novalidate>
+			<input type="email" ng-model="loginModel.email">
+			<input ng-model="loginModel.password" type="password" placeholder="typ hier uw wachtwoord in">
+			<button type="submit"> login</button>
+		</form>
+	</div>
+</section>
