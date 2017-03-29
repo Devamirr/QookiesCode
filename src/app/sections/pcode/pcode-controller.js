@@ -13,7 +13,10 @@ require('angular').module('qookiescode')
 				user,
 				couponUser;
 
-			$scope.pageClass = 'page-home';
+
+			self.hello = 'hello';
+
+			$scope.pageClass = 'page-pcode';
 			// Parse.User.logOut();
 
 			angular.extend($scope, {
@@ -27,13 +30,14 @@ require('angular').module('qookiescode')
 				}
 			});
 
-			var query = new Parse.Query(CouponUser);
-			query.get($state.params.CouponUserId).then(function(couponUser) {
-				$scope.CouponUser.id = couponUser.id;
-				$scope.CouponUser.name = couponUser.email;
-			}, function(error) {
-				console.log(error);
-			});
+			// var query = new Parse.Query(CouponUser);
+			// query.get($state.params.CouponUserId).then(function(couponUser) {
+			// 	// console.log(CouponUserId);
+			// 	$scope.CouponUser.id = couponUser.id;
+			// 	$scope.CouponUser.name = couponUser.username;
+			// }, function(error) {
+			// 	console.log(error);
+			// });
 
 
 		}

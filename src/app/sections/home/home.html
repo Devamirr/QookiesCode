@@ -9,7 +9,7 @@
 
 	</div>
 	<div class="row medium-4 small-8 large-2">
-		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" validate>
+		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" novalidate>
 			<input type="text" class="name" ng-model="loginModel.username" placeholder="name" required>
 			<input type="email" ng-model="loginModel.email" placeholder="email" required>
 			<input type="date" ng-model="loginModel.birthday" required>
