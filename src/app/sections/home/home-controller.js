@@ -35,7 +35,7 @@ require('angular').module('qookiescode')
 				couponUser.birthday = userModel.birthday;
 				couponUser.used = false;
 				couponUser.save().then(function(user) {
-
+					$scope.success = success.message;
 				},function(error){
 					$scope.error = error.message;
 				});
