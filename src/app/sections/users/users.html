@@ -8,7 +8,7 @@
 				<thead>
 					<td> userCode</td>
 					<!-- <td> name</td> -->
-					<td> email </td>
+					<td> name </td>
 					<!-- <td> birthday</td> -->
 					<td> used</td>
 				</thead>
@@ -18,7 +18,7 @@
 						<!-- <span class="done-{{CouponUser.used}}">{{CouponUser}} </span> -->
 						<td> {{ CouponUser.id }} </td>
 						<!-- <td> {{ CouponUser.username }} </td> -->
-						<td> {{ CouponUser.email }} </td>
+						<td> {{ CouponUser.username }} </td>
 						<!-- <td> {{ CouponUser.birthday | date : "MMM d, y h:mm a" }}</td> -->
 						<td> <input ng-model="CouponUser.used" type="checkbox" ng-click="toggleTodo(CouponUser)" /> </td>
 					</tr>

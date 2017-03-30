@@ -33,7 +33,7 @@ require('angular').module('qookiescode')
 			var query = new Parse.Query(CouponUser);
 			query.find().then(function(CouponUsers) {
 				$scope.CouponUsers = CouponUsers;
-				console.log($scope.CouponUsers);
+				// console.log($scope.CouponUsers);
 			});
 
 			$scope.toggleTodo = function toggleTodo(CouponUser) {
