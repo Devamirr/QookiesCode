@@ -26,6 +26,8 @@ require('angular').module('qookiescode')
 					}
 				}
 			});
+
+			$scope.text = false;
 			self.sign = function sign(userModel) {
 				console.log(couponUser);
 				console.log('user signed up');
@@ -34,6 +36,7 @@ require('angular').module('qookiescode')
 				couponUser.username = userModel.username;
 				couponUser.birthday = userModel.birthday;
 				couponUser.used = false;
+				$scope.text = true;
 				couponUser.save().then(function(user) {
 				},function(error){
 					$scope.error = error.message;

@@ -9,11 +9,12 @@
 
 	</div>
 	<div class="row medium-4 small-8 large-2">
-		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" novalidate>
+		<form name="newCouponForm" ng-submit="newCouponForm.$valid && homeCtrl.sign(loginModel)" novalidate >
 			<input type="text" class="name" ng-model="loginModel.username" placeholder="name" required>
 			<input type="email" ng-model="loginModel.email" placeholder="email" required>
 			<input type="date" ng-model="loginModel.birthday" required>
-			<button type="submit" id="submit" name="submit" class="" ng-click="save()" required>send coupon to email</button>
+			<button type="submit" id="submit" name="submit" class="" ng-click="save()" required ng-hide="text">send coupon to email</button>
+			<p ng-show="text">if youdon't see the mail check your spamfolder</p>
 		</form>
 
 		<p>{{error}}</p>
