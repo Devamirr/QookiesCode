@@ -4,6 +4,7 @@ angular.module('qookiescode')
 		function(Parse) {
 			var CouponUser = Parse.Object.extend('CouponUser');
 			Parse.defineAttributes(CouponUser, [
+				'objectId',
 				'email',
 				'username',
 				'used',

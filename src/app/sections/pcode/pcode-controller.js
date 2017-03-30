@@ -22,6 +22,7 @@ require('angular').module('qookiescode')
 			angular.extend($scope, {
 				user: {
 					CouponUser: {
+						objectId: '',
 						username: '',
 						email: '',
 						birthday: '',
@@ -29,15 +30,16 @@ require('angular').module('qookiescode')
 					}
 				}
 			});
-
-			// var query = new Parse.Query(CouponUser);
-			// query.get($state.params.CouponUserId).then(function(couponUser) {
-			// 	// console.log(CouponUserId);
-			// 	$scope.CouponUser.id = couponUser.id;
-			// 	$scope.CouponUser.name = couponUser.username;
-			// }, function(error) {
-			// 	console.log(error);
-			// });
+			var query = new Parse.Query(CouponUser);
+			console.log($state.params.CouponUserId)
+			query.get($state.params.CouponUserId).then(function(couponUser) {
+				console.log(couponUser);
+				$scope.couponUser = {};
+				$scope.couponUser.objectId = couponUser.id;
+				$scope.couponUser.username = couponUser.username;
+			}, function(error) {
+				console.log(error);
+			});
 
 
 		}

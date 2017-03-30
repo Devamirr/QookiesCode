@@ -36,6 +36,8 @@ require('angular').module('qookiescode')
 				couponUser.used = false;
 				couponUser.save().then(function(user) {
 
+				},function(error){
+					$scope.error = error.message;
 				});
 			};
 

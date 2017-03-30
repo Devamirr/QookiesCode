@@ -19,7 +19,8 @@
 
 
 body {
-	background-color: color(second)!important;
+	background-color: color(second);
+  &.users { background-color: color(main)!important; }
   table {
     @extend %table;
     thead { font-weight: bold; }
@@ -32,6 +33,7 @@ body {
       background-color: green; border-radius: 5px;
     }
 }
+ #users { background: color(main); }
 
 #pcode { margin-top: 50px;  color: white; text-align: center!important;
   .footer-social-icons { text-align: center; margin-top: 10px;
