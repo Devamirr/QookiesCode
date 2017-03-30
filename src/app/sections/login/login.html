@@ -20,8 +20,10 @@
 
 
 
-		<form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.login(loginModel)" novalidate>
-			<input type="email" ng-model="loginModel.email">
+		<form name="loginForm" ng-submit="loginForm.$valid && loginCtrl.login(loginModel)" novalidate >
+			<label for="email" class="placeholderLabel">Your email</label>
+			<input type="email" ng-model="loginModel.email" placeholder="typ hier uw email in">
+			<label for="password" class="placeholderLabel">password </label>
 			<input ng-model="loginModel.password" type="password" placeholder="typ hier uw wachtwoord in">
 			<button type="submit"> login</button>
 		</form>

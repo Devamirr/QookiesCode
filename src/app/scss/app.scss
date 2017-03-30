@@ -33,7 +33,9 @@ body {
       background-color: green; border-radius: 5px;
     }
 }
- #users { background: color(main); }
+ #users { background: color(main);
+
+  }
 
 #pcode { margin-top: 50px;  color: white; text-align: center!important;
   .footer-social-icons { text-align: center; margin-top: 10px;
@@ -44,6 +46,7 @@ body {
  }
 
 #home, #login, #pcode {
+  label { color: white; }
   .logo { background: url('../img/Round-logo.svg'); height: 190px; background-repeat: no-repeat; background-size: contain; background-position: center center; margin-top: 40px; margin-bottom: 20px; }
   h3, p { text-align: center; color: white;}
   form { margin-top: 30px; width: 100%;
